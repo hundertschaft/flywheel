@@ -8,5 +8,37 @@
     "yarn": "please-use-pnpm",
     "npm": "please-use-pnpm"
   },
-  "scripts": {}
+  "scripts": {
+    "packages:fix-mismatches": "syncpack fix-mismatches",
+    "packages:format": "syncpack format",
+    "packages:list": "syncpack list",
+    "packages:list-mismatches": "syncpack list-mismatches"
+  },
+  "config": {
+    "syncpack": {
+      "sortAz": [
+        "contributors",
+        "dependencies",
+        "devDependencies",
+        "keywords",
+        "peerDependencies",
+        "resolutions",
+        "scripts"
+      ],
+      "sortFirst": [
+        "name",
+        "private",
+        "version",
+        "type",
+        "description",
+        "author",
+        "packageManager",
+        "engines",
+        "scripts"
+      ]
+    }
+  },
+  "devDependencies": {
+    "syncpack": "^9.8.4"
+  }
 }
