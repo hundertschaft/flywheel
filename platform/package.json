@@ -1,5 +1,12 @@
 {
   "name": "platform",
-  "description": "Mono Repository Application Development Workspace",
+  "description": "Application Development Workspace of the Mono Repository",
+  "packageManager": "pnpm@7.27.1",
+  "engines": {
+    "node": ">=18.14.1",
+    "pnpm": ">=7.27.1",
+    "yarn": "please-use-pnpm",
+    "npm": "please-use-pnpm"
+  },
   "scripts": {}
 }

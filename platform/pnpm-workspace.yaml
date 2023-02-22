@@ -1,0 +1,7 @@
+packages:
+  # All applications in subdirs of apps/
+  - "apps/**"
+  # All libraries in subdirs of library/
+  - "library/**"
+  # All assets in subdirs of (outside) assets folder
+  - "../assets/**"
