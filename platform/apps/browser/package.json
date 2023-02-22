@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc && vite build",
-    "dev": "vite",
+    "dev": "vite --host",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -13,6 +13,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@p/assets": "workspace:*",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react-swc": "^3.2.0",
