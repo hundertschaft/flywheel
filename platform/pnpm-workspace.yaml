@@ -2,6 +2,8 @@ packages:
   # All applications in subdirs of apps/
   - "apps/**"
   # All libraries in subdirs of library/
-  - "library/**"
+  - "libs/**"
+  # All ui elements and components in subdirs of ui/
+  - "ui/**"
   # All assets in subdirs of (outside) assets folder
   - "../assets/**"
