@@ -1,9 +1,11 @@
 {
   "name": "@ui/shell",
-  "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@xstyled/emotion": "^3.7.0"
+  },
+  "peerDependencies": {
+    "@g/assets": "workspace:*"
   }
 }

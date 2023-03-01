@@ -2,7 +2,7 @@ import { useState } from "react";
 import reactLogo from "@g/assets/media/vendor/react.svg";
 import viteLogo from "@g/assets/media/vendor/vite.svg";
 
-function App() {
+function Shell() {
   const [count, setCount] = useState(0);
 
   return (
@@ -31,4 +31,4 @@ function App() {
   );
 }
 
-export default App;
+export default Shell;

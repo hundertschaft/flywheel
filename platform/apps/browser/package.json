@@ -1,7 +1,5 @@
 {
   "name": "@p/browser",
-  "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "build": "tsc && vite build",
@@ -9,9 +7,10 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@g/assets": "workspace:*",
-    "@ui/shell": "workspace:*",
     "@vitejs/plugin-react-swc": "^3.2.0",
     "vite": "^4.1.4"
+  },
+  "peerDependencies": {
+    "@ui/shell": "workspace:*"
   }
 }
