@@ -1,8 +1,6 @@
 packages:
   # All applications in subdirs of apps/
   - "apps/**"
-  # All libraries in subdirs of library/
-  - "libs/**"
   # All ui elements and components in subdirs of ui/
   - "ui/**"
   # All app routing and page views in subdirs of views/
