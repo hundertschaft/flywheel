@@ -3,14 +3,15 @@
   "description": "Application Development Workspace of the Mono Repository",
   "packageManager": "pnpm@7.27.1",
   "scripts": {
-    "format:all": "pnpm format:code && pnpm format:packages",
-    "format:check": "prettier --check .",
-    "format:code": "prettier --write .",
-    "format:packages": "syncpack format",
-    "packages:fix-mismatches": "syncpack fix-mismatches",
-    "packages:list": "syncpack list",
-    "packages:list-mismatches": "syncpack list-mismatches",
-    "prepare": "cd .. && husky install platform/.husky"
+    "prepare": "cd .. && husky install platform/.husky",
+    "start": "pnpm --parallel --stream --if-present -r run dev",
+    "w:format:all": "pnpm format:code && pnpm format:packages",
+    "w:format:check": "prettier --check .",
+    "w:format:code": "prettier --write .",
+    "w:format:packages": "syncpack format",
+    "w:packages:fix-mismatches": "syncpack fix-mismatches",
+    "w:packages:list": "syncpack list",
+    "w:packages:list-mismatches": "syncpack list-mismatches"
   },
   "dependencies": {
     "react": "^18.2.0",
