@@ -22,13 +22,16 @@
   },
   "peerDependencies": {
     "husky": "^8.0.3",
-    "prettier": "^2.8.4",
     "lint-staged": "^13.1.2",
+    "prettier": "^2.8.4",
     "syncpack": "^9.8.4"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,scss,css,md,html,json}": [
       "prettier --write"
+    ],
+    "package.json": [
+      "syncpack format --source"
     ]
   },
   "config": {
@@ -54,6 +57,7 @@
         "dependencies",
         "devDependencies",
         "peerDependencies",
+        "lint-staged",
         "config",
         "engines"
       ]
