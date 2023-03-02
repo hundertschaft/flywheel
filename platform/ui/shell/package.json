@@ -5,5 +5,7 @@
     "@emotion/styled": "^11.10.6",
     "@xstyled/emotion": "^3.7.0"
   },
-  "peerDependencies": {}
+  "peerDependencies": {
+    "@ui/layout": "workspace:*"
+  }
 }

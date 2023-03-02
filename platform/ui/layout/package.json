@@ -1,0 +1,7 @@
+{
+  "name": "@ui/layout",
+  "dependencies": {
+    "@xstyled/emotion": "^3.7.0"
+  },
+  "peerDependencies": {}
+}
