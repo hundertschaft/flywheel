@@ -16,5 +16,5 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["./apps/browser/src/vite-env.d.ts"]
+  "include": ["./apps/browser/src/vite-env.d.ts", "."]
 }
