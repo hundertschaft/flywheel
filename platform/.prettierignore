@@ -1,0 +1,14 @@
+# Formatted by Syncpack
+package.json
+
+# Workspace
+*-lock.*
+pnpm-workspace.yaml
+node_modules
+.husky
+
+# Build Artifacts
+build
+dist
+public
+
