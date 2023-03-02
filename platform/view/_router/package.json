@@ -1,0 +1,7 @@
+{
+  "name": "@view/router",
+  "peerDependencies": {
+    "@ui/shell": "workspace:*",
+    "@g/assets": "workspace:*"
+  }
+}

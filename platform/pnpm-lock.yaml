@@ -24,11 +24,11 @@ importers:
 
   apps/browser:
     specifiers:
-      '@ui/shell': workspace:*
+      '@view/router': workspace:*
       '@vitejs/plugin-react-swc': ^3.2.0
       vite: ^4.1.4
     dependencies:
-      '@ui/shell': link:../../ui/shell
+      '@view/router': link:../../view/_router
     devDependencies:
       '@vitejs/plugin-react-swc': 3.2.0_vite@4.1.4
       vite: 4.1.4
@@ -37,13 +37,19 @@ importers:
     specifiers:
       '@emotion/react': ^11.10.6
       '@emotion/styled': ^11.10.6
-      '@g/assets': workspace:*
       '@xstyled/emotion': ^3.7.0
     dependencies:
       '@emotion/react': 11.10.6_pmekkgnqduwlme35zpnqhenc34
       '@emotion/styled': 11.10.6_oouaibmszuch5k64ms7uxp2aia
-      '@g/assets': link:../../../assets
       '@xstyled/emotion': 3.7.0_4b65gej4s4ehqmzxoznt4rfucq
+
+  view/_router:
+    specifiers:
+      '@g/assets': workspace:*
+      '@ui/shell': workspace:*
+    dependencies:
+      '@g/assets': link:../../../assets
+      '@ui/shell': link:../../ui/shell
 
 packages:
 
