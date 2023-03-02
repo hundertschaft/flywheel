@@ -3,5 +3,27 @@
   "trailingComma": "es5",
   "singleQuote": false,
   "printWidth": 100,
-  "bracketSameLine": true
+  "bracketSameLine": true,
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+  "importOrder": [
+    "assets",
+    "(@g/.*|^)assets/(.*)$",
+
+    "apps",
+    "(@.*|^)apps/(.*)$",
+
+    "^react",
+
+    "<THIRD_PARTY_MODULES>",
+
+    "views",
+    "(@.*|^)views/(.*)$",
+
+    "ui",
+    "(@.*|^)ui/(.*)$",
+
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
 }
