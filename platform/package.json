@@ -3,7 +3,7 @@
   "description": "Application Development Workspace of the Mono Repository",
   "packageManager": "pnpm@7.27.1",
   "scripts": {
-    "prepare": "cd .. && husky install platform/.husky",
+    "prepare": "cd .. && husky install platform/_tooling/.husky",
     "start": "pnpm --parallel --stream --if-present -r run dev",
     "w:format:all": "pnpm format:code && pnpm format:packages",
     "w:format:check": "prettier --check .",
