@@ -32,11 +32,11 @@ importers:
 
   apps/browser:
     specifiers:
-      '@view/router': workspace:*
+      '@views/router': workspace:*
       '@vitejs/plugin-react-swc': ^3.2.0
       vite: ^4.1.4
     dependencies:
-      '@view/router': link:../../view/_router
+      '@views/router': link:../../views/_router
     devDependencies:
       '@vitejs/plugin-react-swc': 3.2.0_vite@4.1.4
       vite: 4.1.4
@@ -66,7 +66,7 @@ importers:
       '@ui/layout': link:../layout
       '@xstyled/emotion': 3.7.0_4b65gej4s4ehqmzxoznt4rfucq
 
-  view/_router:
+  views/_router:
     specifiers:
       '@ui/components': workspace:*
       '@ui/layout': workspace:*

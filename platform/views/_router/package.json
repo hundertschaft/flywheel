@@ -1,5 +1,5 @@
 {
-  "name": "@view/router",
+  "name": "@views/router",
   "peerDependencies": {
     "@ui/shell": "workspace:*",
     "@ui/layout": "workspace:*",
