@@ -11,6 +11,11 @@ const config: StorybookConfig = {
     name: "@storybook/react-vite",
     options: {},
   },
+  core: {
+    // Telemetry for Storybook Team
+    disableTelemetry: false,
+    enableCrashReports: true,
+  },
   docs: {
     autodocs: "tag",
   },
