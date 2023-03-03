@@ -1,5 +1,13 @@
-# IDE
-.vscode
+### VS Code Workspace ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### VS Code ###
+# Ignore all local history of files
+**/.history
 
 # No NPM
 package-lock.json
