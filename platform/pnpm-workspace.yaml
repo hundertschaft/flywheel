@@ -1,4 +1,6 @@
 packages:
+  # All additional tools for tests and development
+  - "_tooling/**"
   # All applications in subdirs of apps/
   - "apps/**"
   # All ui elements and components in subdirs of ui/
