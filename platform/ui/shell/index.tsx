@@ -1,5 +1,3 @@
-import Layout from "@ui/layout";
-
 import DesignSystem from "./DesignSystem";
 
 interface ShellProps {
@@ -7,11 +5,7 @@ interface ShellProps {
 }
 
 const Shell = ({ children }: ShellProps) => {
-  return (
-    <DesignSystem>
-      <Layout>{children}</Layout>
-    </DesignSystem>
-  );
+  return <DesignSystem>{children}</DesignSystem>;
 };
 
 export default Shell;

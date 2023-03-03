@@ -41,30 +41,39 @@ importers:
       '@vitejs/plugin-react-swc': 3.2.0_vite@4.1.4
       vite: 4.1.4
 
-  ui/layout:
+  ui:
     specifiers:
       '@xstyled/emotion': ^3.7.0
     dependencies:
       '@xstyled/emotion': 3.7.0_4b65gej4s4ehqmzxoznt4rfucq
 
+  ui/components:
+    specifiers:
+      '@g/assets': workspace:*
+    dependencies:
+      '@g/assets': link:../../../assets
+
+  ui/layout:
+    specifiers: {}
+
   ui/shell:
     specifiers:
       '@emotion/react': ^11.10.6
-      '@emotion/styled': ^11.10.6
       '@ui/layout': workspace:*
       '@xstyled/emotion': ^3.7.0
     dependencies:
       '@emotion/react': 11.10.6_pmekkgnqduwlme35zpnqhenc34
-      '@emotion/styled': 11.10.6_oouaibmszuch5k64ms7uxp2aia
       '@ui/layout': link:../layout
       '@xstyled/emotion': 3.7.0_4b65gej4s4ehqmzxoznt4rfucq
 
   view/_router:
     specifiers:
-      '@g/assets': workspace:*
+      '@ui/components': workspace:*
+      '@ui/layout': workspace:*
       '@ui/shell': workspace:*
     dependencies:
-      '@g/assets': link:../../../assets
+      '@ui/components': link:../../ui/components
+      '@ui/layout': link:../../ui/layout
       '@ui/shell': link:../../ui/shell
 
 packages:
