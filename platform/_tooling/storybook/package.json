@@ -2,6 +2,7 @@
   "name": "@tooling/storybook",
   "scripts": {
     "build-storybook": "storybook build",
+    "dev": "storybook dev -p 6006 --ci --quiet",
     "storybook": "storybook dev -p 6006"
   },
   "dependencies": {
