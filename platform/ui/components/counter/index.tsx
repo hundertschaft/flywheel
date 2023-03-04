@@ -3,7 +3,17 @@ import viteLogo from "@g/assets/media/vendor/vite.svg";
 
 import { useState } from "react";
 
-const Counter = () => {
+interface CounterProps {
+  /**
+   * Title of the sample counter.
+   */
+  title?: string;
+}
+
+/**
+ * Sample counter component to test rendering.
+ */
+const Counter = ({ title = "Tile Title" }: CounterProps) => {
   const [count, setCount] = useState(0);
 
   return (
@@ -16,7 +26,7 @@ const Counter = () => {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>{title}</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
         <p>

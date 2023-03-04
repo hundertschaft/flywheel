@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Counter from "@ui/components/counter";
+import Counter from "@ui/components/Counter";
 import Layout from "@ui/layout";
 import Shell from "@ui/shell";
 
@@ -12,7 +12,7 @@ const Router = ({}: RouterProps) => {
   return (
     <Shell>
       <Layout>
-        <Counter />
+        <Counter title="Hello from Views" />
       </Layout>
     </Shell>
   );
