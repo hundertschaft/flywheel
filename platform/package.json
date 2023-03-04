@@ -5,6 +5,7 @@
   "scripts": {
     "prepare": "cd .. && husky install platform/_tooling/.husky",
     "start": "pnpm --parallel --stream --if-present -r run dev",
+    "sys:clear-ports": "kill -15 $(lsof -ti:3000,6006)",
     "w:format:all": "pnpm format:code && pnpm format:packages",
     "w:format:check": "prettier --check .",
     "w:format:code": "prettier --write .",
