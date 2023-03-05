@@ -14,24 +14,24 @@
     "TODO",
     "[ ]",
     "[x]",
-    "UPSTREAM",
+    "DEPISSUE",
     "NOTE"
   ],
   "todo-tree.highlights.foregroundColourScheme": [
-    "#ffffff",
-    "#3C250B",
-    "#FEEDAF",
-    "#ffffff",
-    "#68AF67",
-    "#68AF67"
+    "#fff3f3dc",
+    "#271905de",
+    "#ffffffe8",
+    "#e6ffebee",
+    "#6dc46be6",
+    "#6dc46be6"
   ],
   "todo-tree.highlights.backgroundColourScheme": [
-    "#CC1201",
-    "#FD9B08",
-    "#DFCC02",
-    "#00801B",
+    "#c21e12b4",
+    "#de8913b4",
+    "#e2c223d2",
+    "#0d742394",
     "#68AF6724",
-    "#68AF6724"
+    "#68af670c"
   ],
   "todo-tree.highlights.defaultHighlight": {
     "opacity": 70,
@@ -39,21 +39,27 @@
     "gutterIcon": true
   },
   "todo-tree.highlights.customHighlight": {
-    "UPSTREAM": {
+    "DEPISSUE": {
       "icon": "package-dependencies",
-      "foreground": "#741b1b",
-      "background": "#e2a0ab",
-      "iconColour": "#a9405c"
+      "foreground": "#ffeff2d6",
+      "background": "#e281a34b",
+      "iconColour": "#a9405c40"
     },
     "NOTE": {
       "icon": "pencil",
-      "foreground": "#FFFFFF90",
-      "background": "#0B3C0B50",
-      "iconColour": "#0B3C0B",
+      "type": "line",
+      "foreground": "#ffffff6e",
+      "background": "#0b3c0b4b",
+      "iconColour": "#62975a40",
       "hideFromTree": true,
       "fontWeight": "normal",
       "fontStyle": "italic",
-      "gutterIcon": false
+      "gutterIcon": true
     }
-  }
+  },
+  "todo-tree.tree.labelFormat": "${after}",
+  "editor.wordWrapColumn": 90,
+  "editor.wordWrap": "wordWrapColumn",
+  "diffEditor.wordWrap": "off",
+  "cSpell.words": ["DEPISSUE"]
 }
