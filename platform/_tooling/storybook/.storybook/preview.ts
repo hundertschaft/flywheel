@@ -11,7 +11,11 @@ const preview: Preview = {
         color: /(background|color)$/i,
         date: /Date$/,
       },
-      expanded: true,
+      /**
+       * Enables ArgType descriptions within control panels.
+       * UPSTREAM Storybook: Disabled since not working for JSDocs. Enable when this is fixed: https://github.com/storybookjs/storybook/issues/21399
+       */
+      expanded: false,
     },
   },
 };
