@@ -1,0 +1,42 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+## Validating Commit Message for Gitmoji Tag
+message="$(cat $1)"
+requiredPattern="^(🐛|🚨|✏️|✅|🔈|💡|🔇|🎨|👽|⚡️|👌|🔨|📦|🕸|🛰|🍏|🤖|🏁|🍎|🐧|🚑|🔒|🚀|🎉|🔖|⏪|📝|🔀|📄|💭|♿️|📈|🌐|🐳|🗃|💚|👷‍♂️|✨|🚧|💥|💄|🍱|🔥|🚚|🔧|⬆️|⬇️|➕|➖|💩|🍻|🖐|🔺|🔻) .*$"
+if ! [[ $message =~ $requiredPattern ]];
+then
+  echo "-"
+  echo "=== Error: Commit message has no gitmoji tag(s) ==="
+  echo ""
+  echo "Your commit message was:"
+  echo $message
+  echo ""
+  echo "--"
+  echo "You need at lest one gitmoji intention tag"
+  echo "at the beinning of your commit message."
+  echo ""
+  echo "Refine"
+  echo "  flaws: 🐛  🚨  ✏️  ✅  🔈  💡  🔇"
+  echo "  quality: 🎨  👽  ⚡️  👌  🔨  📦"
+  echo "  platform: 🕸  🛰  🍏  🤖  🏁  🍎  🐧"
+  echo "  stability: 🚑  🔒"
+  echo ""
+  echo "Manage"
+  echo "  delivery: 🚀  🎉  🔖  ⏪  📝  🔀  📄"
+  echo "  value: 💭  ♿️  📈  🌐"
+  echo "  infrastrucutre: 🐳  🗃"
+  echo "  integration: 💚  👷‍♂️"
+  echo ""
+  echo "Create"
+  echo "  features: ✨  🚧  💥"
+  echo "  changes: 💄  🍱  🔥  🚚"
+  echo "  reliablity: 🔧  ⬆️  ⬇️  ➕  ➖"
+  echo "  ideas: 💩  🍻  🖐"
+  echo ""
+  echo "-"
+  echo "For more information, check gitmoji.com."
+  echo "This message was generated from the following script: platform/_tooling/.husky/commit-msg"
+  echo "-"
+  exit 1
+fi
