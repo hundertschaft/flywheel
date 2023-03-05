@@ -1,5 +1,59 @@
 {
   "files.exclude": {
     "*/*/**/node_modules": true
+  },
+  "todo-tree.tree.disableCompactFolders": false,
+  "todo-tree.highlights.useColourScheme": true,
+  "todo-tree.regex.enableMultiLine": false,
+  "todo-tree.regex.regex": "(\\*|//|#|<!--|;|/\\*|^|^[ \\t]*(-|\\d+.))\\s*($TAGS)",
+  "todo-tree.filtering.includeHiddenFiles": true,
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "[ ]",
+    "[x]",
+    "UPSTREAM",
+    "NOTE"
+  ],
+  "todo-tree.highlights.foregroundColourScheme": [
+    "#ffffff",
+    "#3C250B",
+    "#FEEDAF",
+    "#ffffff",
+    "#68AF67",
+    "#68AF67"
+  ],
+  "todo-tree.highlights.backgroundColourScheme": [
+    "#CC1201",
+    "#FD9B08",
+    "#DFCC02",
+    "#00801B",
+    "#68AF6724",
+    "#68AF6724"
+  ],
+  "todo-tree.highlights.defaultHighlight": {
+    "opacity": 70,
+    "fontWeight": "bold",
+    "gutterIcon": true
+  },
+  "todo-tree.highlights.customHighlight": {
+    "UPSTREAM": {
+      "icon": "package-dependencies",
+      "foreground": "#741b1b",
+      "background": "#e2a0ab",
+      "iconColour": "#a9405c"
+    },
+    "NOTE": {
+      "icon": "pencil",
+      "foreground": "#FFFFFF90",
+      "background": "#0B3C0B50",
+      "iconColour": "#0B3C0B",
+      "hideFromTree": true,
+      "fontWeight": "normal",
+      "fontStyle": "italic",
+      "gutterIcon": false
+    }
   }
 }
