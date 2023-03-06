@@ -21,6 +21,8 @@ const Header = ({ children }: HeaderProps) => {
       justifyContent="center"
       alignItems="center"
       h="60px"
+      text="xl"
+      fontWeight="semibold"
     >
       {children}
     </x.header>
