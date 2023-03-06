@@ -9,10 +9,7 @@ interface LayoutProps {
 const Layout = ({ children, header, footer }: LayoutProps) => {
   return (
     <>
-      <x.header backgroundColor="red" h="60px">
-        <x.text color="white">Header</x.text>
-        {header}
-      </x.header>
+      {header}
       <main>{children}</main>
       {footer}
     </>
