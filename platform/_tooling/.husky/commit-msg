@@ -3,7 +3,7 @@
 
 ## Validating Commit Message for Gitmoji Tag
 message="$(cat $1)"
-requiredPattern="^(🐛|🚨|✏️|✅|🔈|💡|🔇|🎨|👽|⚡️|👌|🔨|📦|🕸|🛰|🍏|🤖|🏁|🍎|🐧|🚑|🔒|🚀|🎉|🔖|⏪|📝|🔀|📄|💭|♿️|📈|🌐|🐳|🗃|💚|👷‍♂️|✨|🚧|💥|💄|🍱|🔥|🚚|🔧|⬆️|⬇️|➕|➖|💩|🍻|🖐|🔺|🔻) .*$"
+requiredPattern="^(🐛|🚨|✏️|✅|🔈|💡|🔇|🎨|👽|⚡️|👌|🔨|📦|🕸|🛰|🍏|🤖|🏁|🍎|🐧|🚑|🔒|🚀|🎉|🔖|⏪|📝|🔀|📄|💬|♿️|📈|🌐|🐳|🗃|💚|👷‍♂️|✨|🚧|💥|💄|🍱|🔥|🚚|🔧|⬆️|⬇️|➕|➖|💩|🍻|🖐|🔺|🔻) .*$"
 if ! [[ $message =~ $requiredPattern ]];
 then
   echo "-"
@@ -13,8 +13,8 @@ then
   echo $message
   echo ""
   echo "--"
-  echo "You need at lest one gitmoji intention tag"
-  echo "at the beinning of your commit message."
+  echo "You need at lest one gitmoji intention tag at the"
+  echo "beinning of your commit message followed by a space."
   echo ""
   echo "Refine"
   echo "  flaws: 🐛  🚨  ✏️  ✅  🔈  💡  🔇"
@@ -24,7 +24,7 @@ then
   echo ""
   echo "Manage"
   echo "  delivery: 🚀  🎉  🔖  ⏪  📝  🔀  📄"
-  echo "  value: 💭  ♿️  📈  🌐"
+  echo "  value: 💬  ♿️  📈  🌐"
   echo "  infrastrucutre: 🐳  🗃"
   echo "  integration: 💚  👷‍♂️"
   echo ""
