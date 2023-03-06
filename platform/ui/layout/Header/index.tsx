@@ -22,7 +22,7 @@ const Header = ({ children }: HeaderProps) => {
       alignItems="center"
       h="60px"
     >
-      <x.h1 text="xl">{children}</x.h1>
+      {children}
     </x.header>
   );
 };
