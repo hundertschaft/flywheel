@@ -15,8 +15,12 @@
     "[ ]",
     "[x]",
     "DEPISSUE",
-    "NOTE"
+    "NOTE",
+    "Note"
   ],
+  "todo-tree.general.tagGroups": {
+    "NOTE": ["NOTE", "Note"]
+  },
   "todo-tree.highlights.foregroundColourScheme": [
     "#fff3f3dc",
     "#271905de",
