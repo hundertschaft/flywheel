@@ -7,6 +7,7 @@ import Footer from "@ui/layout/Footer";
 import Header from "@ui/layout/Header";
 
 import Counter from "@ui/components/CounterSample";
+import Hero from "@ui/components/Hero";
 
 interface RouterProps {}
 
@@ -14,14 +15,17 @@ const Router = ({}: RouterProps) => {
   return (
     <Shell>
       <Layout
-        header={<Header>Welcome Header</Header>}
+        header={<Header>Header</Header>}
         footer={
           <Footer>
             <i>the footer</i>
           </Footer>
         }
       >
-        <Counter title="Hello from Views" />
+        <Hero welcomeMsg="Welcome to this Sample App!">
+          This is a sample app built with React, TypeScript, Vite and xStyled
+          (Emotion) in a Mono-Repository style pattern using pnpm workspaces.
+        </Hero>
       </Layout>
     </Shell>
   );
