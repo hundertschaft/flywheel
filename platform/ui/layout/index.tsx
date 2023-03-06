@@ -10,7 +10,9 @@ const Layout = ({ children, header, footer }: LayoutProps) => {
   return (
     <x.div minH="100vh" display="flex" flexDirection="column">
       {header}
-      <x.main flex="auto">{children}</x.main>
+      <x.main mx="4" flex="auto">
+        {children}
+      </x.main>
       {footer}
     </x.div>
   );
