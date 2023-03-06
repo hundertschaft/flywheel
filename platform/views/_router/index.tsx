@@ -14,8 +14,12 @@ const Router = ({}: RouterProps) => {
   return (
     <Shell>
       <Layout
-        header={<Header>Hello and Welcome</Header>}
-        footer={<Footer>a sample set-up</Footer>}
+        header={<Header>Welcome Header</Header>}
+        footer={
+          <Footer>
+            <i>the footer</i>
+          </Footer>
+        }
       >
         <Counter title="Hello from Views" />
       </Layout>
