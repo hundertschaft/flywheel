@@ -3,8 +3,5 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@xstyled/emotion": "^3.7.0"
-  },
-  "peerDependencies": {
-    "@ui/layout": "workspace:*"
   }
 }

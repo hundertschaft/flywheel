@@ -98,11 +98,9 @@ importers:
   ui/shell:
     specifiers:
       '@emotion/react': ^11.10.6
-      '@ui/layout': workspace:*
       '@xstyled/emotion': ^3.7.0
     dependencies:
       '@emotion/react': 11.10.6_pmekkgnqduwlme35zpnqhenc34
-      '@ui/layout': link:../layout
       '@xstyled/emotion': 3.7.0_4b65gej4s4ehqmzxoznt4rfucq
 
   views/_router:
