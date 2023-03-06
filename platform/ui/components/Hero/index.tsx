@@ -5,6 +5,8 @@ import { ReactNode } from "react";
 
 import { x } from "@xstyled/emotion";
 
+import Rating from "./Rating";
+
 interface HeroProps {
   welcomeMsg: string;
   /**
@@ -29,6 +31,15 @@ const Hero = ({ welcomeMsg, children }: HeroProps) => {
         {welcomeMsg}
       </x.h1>
       <x.p>{children}</x.p>
+
+      <Rating
+        from={1}
+        to={10}
+        threshold={6}
+        timeToRespond={3000}
+        msgPositive="Great!"
+        msgNegative="Oh bad"
+      />
     </>
   );
 };
