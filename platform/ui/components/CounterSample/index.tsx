@@ -3,7 +3,7 @@ import viteLogo from "@g/assets/media/vendor/vite.svg";
 
 import { useState } from "react";
 
-interface CounterProps {
+interface CounterSampleProps {
   /**
    * Title of the sample counter.
    */
@@ -13,7 +13,7 @@ interface CounterProps {
 /**
  * Sample counter component to test rendering.
  */
-const Counter = ({ title = "Tile Title" }: CounterProps) => {
+const CounterSample = ({ title = "Tile Title" }: CounterSampleProps) => {
   const [count, setCount] = useState(0);
 
   return (
@@ -28,7 +28,9 @@ const Counter = ({ title = "Tile Title" }: CounterProps) => {
       </div>
       <h1>{title}</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
@@ -37,4 +39,4 @@ const Counter = ({ title = "Tile Title" }: CounterProps) => {
   );
 };
 
-export default Counter;
+export default CounterSample;

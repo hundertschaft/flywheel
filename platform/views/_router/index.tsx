@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Counter from "@ui/components/Counter";
+import Counter from "@ui/components/CounterSample";
 import Layout from "@ui/layout";
 import Shell from "@ui/shell";
 
