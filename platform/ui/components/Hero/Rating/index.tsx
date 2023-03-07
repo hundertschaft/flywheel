@@ -10,6 +10,10 @@ interface RatingProps {
    */
   to: number;
   /**
+   * Default `1`. Number of rating steps between from and to.
+   */
+  stepSize?: number;
+  /**
    * Integer that defines the threshold at which the rating is considered positive
    */
   threshold: number;
@@ -33,12 +37,30 @@ interface RatingProps {
 const Rating = ({
   from,
   to,
+  stepSize = 1,
   timeToRespond,
   threshold,
   msgPositive,
   msgNegative,
 }: RatingProps) => {
-  return <x.div>A Rating Component</x.div>;
+  return (
+    <x.div pt={6}>
+      <x.h2 my={2} text="lg" fontStyle="italic">
+        Rating
+      </x.h2>
+      <x.p fontStyle="italic" text="sm">
+        How strong do you agree with the following statement:
+      </x.p>
+      <x.div m={3} text="sm">
+        <x.code lineHeight="relaxed">
+          An insufficient design removes your ability to change or scale.
+        </x.code>
+      </x.div>
+      <x.div py={2} display="flex" justifyContent="center">
+        <x.button text="lg">START</x.button>
+      </x.div>
+    </x.div>
+  );
 };
 
 export default Rating;
