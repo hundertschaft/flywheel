@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { x } from "@xstyled/emotion";
 
 interface RatingProps {
@@ -43,6 +45,16 @@ const Rating = ({
   msgPositive,
   msgNegative,
 }: RatingProps) => {
+  const [quizActive, setQuizActive] = useState(false);
+
+  let ratingInput;
+
+  if (quizActive) {
+    ratingInput = <x.div text="sm">Quiz Active and ready for Input</x.div>;
+  } else {
+    ratingInput = <x.div text="sm">let's go</x.div>;
+  }
+
   return (
     <x.div pt={6}>
       <x.h2 my={2} text="lg" fontStyle="italic">
@@ -56,8 +68,14 @@ const Rating = ({
           An insufficient design removes your ability to change or scale.
         </x.code>
       </x.div>
+      {ratingInput}
       <x.div py={2} display="flex" justifyContent="center">
-        <x.button text="lg">START</x.button>
+        <x.button
+          text="lg"
+          onClick={() => setQuizActive((quizActive) => !quizActive)}
+        >
+          {quizActive ? "START" : "STOP"}
+        </x.button>
       </x.div>
     </x.div>
   );
