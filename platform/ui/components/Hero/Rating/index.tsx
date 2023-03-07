@@ -2,19 +2,9 @@ import { useState } from "react";
 
 import { x } from "@xstyled/emotion";
 
-interface RatingProps {
-  /**
-   * Integer from which the rating starts
-   */
-  from: number;
-  /**
-   * Integer to which the rating ends
-   */
-  to: number;
-  /**
-   * Default `1`. Number of rating steps between from and to.
-   */
-  stepSize?: number;
+import InputRating, { InputRatingProps } from "./InputRating";
+
+interface RatingProps extends InputRatingProps {
   /**
    * Integer that defines the threshold at which the rating is considered positive
    */
@@ -46,13 +36,21 @@ const Rating = ({
   msgNegative,
 }: RatingProps) => {
   const [quizActive, setQuizActive] = useState(false);
+  const [rating, setRating] = useState(0);
 
-  let ratingInput;
+  let inputRating;
 
   if (quizActive) {
-    ratingInput = <x.div text="sm">Quiz Active and ready for Input</x.div>;
+    inputRating = (
+      <InputRating
+        from={from}
+        to={to}
+        stepSize={stepSize}
+        getCurrentRating={(currentRating) => setRating(currentRating)}
+      />
+    );
   } else {
-    ratingInput = <x.div text="sm">let's go</x.div>;
+    inputRating = <x.div text="sm">let's go</x.div>;
   }
 
   return (
@@ -68,15 +66,23 @@ const Rating = ({
           An insufficient design removes your ability to change or scale.
         </x.code>
       </x.div>
-      {ratingInput}
+
+      {inputRating}
+
       <x.div py={2} display="flex" justifyContent="center">
         <x.button
           text="lg"
           onClick={() => setQuizActive((quizActive) => !quizActive)}
         >
-          {quizActive ? "START" : "STOP"}
+          {quizActive ? "STOP" : "START"}
         </x.button>
       </x.div>
+
+      {rating >= threshold ? (
+        <x.div>{msgPositive}</x.div>
+      ) : (
+        <x.div>{msgNegative}</x.div>
+      )}
     </x.div>
   );
 };
