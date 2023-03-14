@@ -6,13 +6,15 @@
     "prepare": "cd .. && husky install platform/_tooling/.husky",
     "start": "pnpm --parallel --stream --if-present -r run dev",
     "sys:clear-ports": "kill -15 $(lsof -ti:3000,6006)",
-    "w:format:all": "pnpm format:code && pnpm format:packages",
-    "w:format:check": "prettier --check .",
-    "w:format:code": "prettier --write .",
-    "w:format:packages": "syncpack format",
-    "w:packages:fix-mismatches": "syncpack fix-mismatches",
-    "w:packages:list": "syncpack list",
-    "w:packages:list-mismatches": "syncpack list-mismatches"
+    "w:code:fix": "pnpm w:code:forma && pnpm w:packages:format",
+    "w:code:fix-format": "prettier --write .",
+    "w:code:fix-logic": "",
+    "w:code:lint-format": "prettier --check .",
+    "w:code:lint-logic": "eslint .",
+    "w:packages:fix-format": "syncpack format",
+    "w:packages:fix-mismatch": "syncpack fix-mismatches",
+    "w:packages:lint": "syncpack list-mismatches",
+    "w:packages:list": "syncpack list"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -26,6 +28,10 @@
   },
   "peerDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "eslint": "^8.36.0",
+    "eslint-plugin-react": "^7.32.2",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.2",
     "prettier": "^2.8.4",
