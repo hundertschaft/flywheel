@@ -21,5 +21,21 @@
     "react/no-unescaped-entities": "off",
     "@typescript-eslint/no-empty-interface": "off",
     "prefer-const": "warn"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        /*
+         * Note needed to resolve tsconfig inside monorepo. See here: https://stackoverflow.com/a/71699452/2763239
+         */
+        "project": [
+          "*/tsconfig.json",
+          "ui/tsconfig.json",
+          "views/tsconfig.json",
+          "apps/*/tsconfig.json",
+          "_tooling/*/tsconfig.json"
+        ]
+      }
+    }
   }
 }
