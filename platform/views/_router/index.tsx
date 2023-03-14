@@ -1,12 +1,9 @@
-import { useState } from "react";
-
 import Shell from "@ui/shell";
 
 import Layout from "@ui/layout";
 import Footer from "@ui/layout/Footer";
 import Header from "@ui/layout/Header";
 
-import Counter from "@ui/components/CounterSample";
 import Hero from "@ui/components/Hero";
 
 interface RouterProps {}

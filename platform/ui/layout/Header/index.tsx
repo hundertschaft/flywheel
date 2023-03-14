@@ -15,14 +15,14 @@ interface HeaderProps {
 const Header = ({ children }: HeaderProps) => {
   return (
     <x.header
-      mb="4"
+      alignItems="center"
       borderBottom="1"
       display="flex"
-      justifyContent="center"
-      alignItems="center"
-      h="60px"
-      text="xl"
       fontWeight="semibold"
+      h="60px"
+      justifyContent="center"
+      mb="4"
+      text="xl"
     >
       {children}
     </x.header>

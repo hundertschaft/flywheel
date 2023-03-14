@@ -23,22 +23,22 @@ const Hero = ({ welcomeMsg, children }: HeroProps) => {
   return (
     <>
       <x.div display="flex" gap={2} mb={3}>
-        <x.img width={24} src={viteLogo} alt="Vite logo" />
-        <x.img width={24} src={reactLogo} alt="React logo" />
+        <x.img alt="Vite logo" src={viteLogo} width={24} />
+        <x.img alt="React logo" src={reactLogo} width={24} />
       </x.div>
 
-      <x.h1 text="xl" mb={2}>
+      <x.h1 mb={2} text="xl">
         {welcomeMsg}
       </x.h1>
       <x.p>{children}</x.p>
 
       <Rating
         from={1}
-        to={10}
+        msgNegative="Oh bad"
+        msgPositive="Great!"
         threshold={6}
         timeToRespond={3000}
-        msgPositive="Great!"
-        msgNegative="Oh bad"
+        to={10}
       />
     </>
   );

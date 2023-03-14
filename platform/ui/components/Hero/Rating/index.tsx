@@ -44,9 +44,9 @@ const Rating = ({
     inputRating = (
       <InputRating
         from={from}
-        to={to}
-        stepSize={stepSize}
         getCurrentRating={(currentRating) => setRating(currentRating)}
+        stepSize={stepSize}
+        to={to}
       />
     );
   } else {
@@ -55,7 +55,7 @@ const Rating = ({
 
   return (
     <x.div pt={6}>
-      <x.h2 my={2} text="lg" fontStyle="italic">
+      <x.h2 fontStyle="italic" my={2} text="lg">
         Rating
       </x.h2>
       <x.p fontStyle="italic" text="sm">
@@ -69,7 +69,7 @@ const Rating = ({
 
       {inputRating}
 
-      <x.div py={2} display="flex" justifyContent="center">
+      <x.div display="flex" justifyContent="center" py={2}>
         <x.button
           text="lg"
           onClick={() => setQuizActive((quizActive) => !quizActive)}

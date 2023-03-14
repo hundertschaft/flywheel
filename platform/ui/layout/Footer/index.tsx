@@ -9,12 +9,12 @@ interface FooterProps {
 const Footer = ({ children }: FooterProps) => {
   return (
     <x.footer
-      mt="4"
+      alignItems="center"
       borderTop="1"
       display="flex"
-      justifyContent="center"
-      alignItems="center"
       h="30px"
+      justifyContent="center"
+      mt="4"
     >
       {children}
     </x.footer>

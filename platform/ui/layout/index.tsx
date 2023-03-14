@@ -8,9 +8,9 @@ interface LayoutProps {
 
 const Layout = ({ children, header, footer }: LayoutProps) => {
   return (
-    <x.div minH="100vh" display="flex" flexDirection="column">
+    <x.div display="flex" flexDirection="column" minH="100vh">
       {header}
-      <x.main mx="4" flex="auto">
+      <x.main flex="auto" mx="4">
         {children}
       </x.main>
       {footer}

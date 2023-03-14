@@ -29,7 +29,7 @@ const InputRating = ({
 }: InputRatingProps) => {
   const [count, setCount] = useState(0);
 
-  let currentRating = count + from;
+  const currentRating = count + from;
 
   function increment() {
     if (currentRating >= to) return;
