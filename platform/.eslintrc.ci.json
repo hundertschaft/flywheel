@@ -1,0 +1,26 @@
+{
+  "extends": ".eslintrc.json",
+  "rules": {
+    "prefer-const": "warn",
+    "react/jsx-no-target-blank": "error",
+    "react/jsx-sort-props": [
+      "warn",
+      {
+        "callbacksLast": true,
+        "shorthandFirst": true,
+        "shorthandLast": false,
+        "ignoreCase": true,
+        "noSortAlphabetically": false,
+        "multiline": "last"
+      }
+    ],
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "args": "after-used"
+      }
+    ]
+  }
+}
