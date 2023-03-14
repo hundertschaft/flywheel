@@ -6,11 +6,11 @@
     "prepare": "cd .. && husky install platform/_tooling/.husky",
     "start": "pnpm --parallel --stream --if-present -r run dev",
     "sys:clear-ports": "kill -15 $(lsof -ti:3000,6006)",
-    "w:code:fix": "pnpm w:code:forma && pnpm w:packages:format",
     "w:code:fix-format": "prettier --write .",
     "w:code:fix-logic": "eslint -c .eslintrc.ci.json . --fix",
     "w:code:lint-format": "prettier --check .",
     "w:code:lint-logic": "eslint -c .eslintrc.ci.json .",
+    "w:fix": "pnpm w:packages:fix-format && pnpm w:code:fix-logic && pnpm w:code:fix-format",
     "w:packages:fix-format": "syncpack format",
     "w:packages:fix-mismatch": "syncpack fix-mismatches",
     "w:packages:lint": "syncpack list-mismatches",
@@ -42,6 +42,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,scss,css,md,html,json}": [
+      "eslint -c .eslintrc.ci.json --fix",
       "prettier --write"
     ],
     "package.json": [
