@@ -1,10 +1,33 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-## Validating Commit Message for Gitmoji Tag
+# Get the commit message
 message="$(cat $1)"
-requiredPattern="^(🐛|🚨|✏️|✅|🔈|💡|🔇|🎨|👽|⚡️|👌|🔨|📦|🕸|🛰|🍏|🤖|🏁|🍎|🐧|🚑|🔒|🚀|🎉|🔖|⏪|📝|🔀|📄|💬|♿️|📈|🌐|🐳|🗃|💚|👷‍♂️|✨|🚧|💥|💄|🍱|🔥|🚚|🔧|⬆️|⬇️|➕|➖|💩|🍻|🖐|🔺|🔻) .*$"
-if ! [[ $message =~ $requiredPattern ]];
+
+## Validate Commit Message for GitHub Issue Number
+# POSIX Regex:
+#  Have a space followed by a hash, digits and a space or end of line
+githubIssuePattern=" #[0-9]+($| )"
+if ! [[ $message =~ $githubIssuePattern ]];
+then
+  echo "-"
+  echo "=== Error: Commit message has no associated Github Issue ==="
+  echo ""
+  echo "Your commit message was:"
+  echo $message
+  echo ""
+  echo "--"
+  echo "You need to reference at least one Github Issue. Like: #123"
+  echo "The first mentioned issue should be the primary ticket."
+  echo ""
+  echo "This message was generated from the following script: platform/_tooling/.husky/commit-msg"
+  echo "-"
+  exit 1
+fi
+
+## Validating Commit Message for Gitmoji Intention Tag
+gitmorjiIntentionPattern="^(🐛|🚨|✏️|✅|🔈|💡|🔇|🎨|👽|⚡️|👌|🔨|📦|🕸|🛰|🍏|🤖|🏁|🍎|🐧|🚑|🔒|🚀|🎉|🔖|⏪|📝|🔀|📄|💬|♿️|📈|🌐|🐳|🗃|💚|👷‍♂️|✨|🚧|💥|💄|🍱|🔥|🚚|🔧|⬆️|⬇️|➕|➖|💩|🍻|🖐|🔺|🔻) .*$"
+if ! [[ $message =~ $gitmorjiIntentionPattern ]];
 then
   echo "-"
   echo "=== Error: Commit message has no gitmoji tag(s) ==="
