@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-cd ./platform && pnpx lint-staged
+cd ./platform && pnpx lint-staged && pnpm w:packages:lint
