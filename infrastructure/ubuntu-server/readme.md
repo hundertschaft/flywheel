@@ -18,7 +18,9 @@ SSH into the fresh server and do the following
 sudo snap install microk8s --classic
 
 # Add ubuntu user to microk8s group to avoid sudo
+# Note this assumes that the user is called "ubuntu"
 sudo usermod -a -G microk8s ubuntu || sudo chown -R ubuntu ~/.kube
+# -> Ignore .kube might not exist warning
 
 # Reload user group to apply changes
 newgrp microk8s
