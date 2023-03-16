@@ -8,7 +8,8 @@ message="$(cat $1)"
 # POSIX Regex:
 #  Have a space followed by a hash, digits and a space or end of line
 githubIssuePattern=" #[0-9]+($| )"
-if ! [[ $message =~ $githubIssuePattern ]];
+githubIssueUrlPattern="issues/[0-9]+"
+if ! [[ $message =~ $githubIssuePattern || $message =~ $githubIssueUrlPattern ]];
 then
   echo "-"
   echo "=== Error: Commit message has no associated Github Issue ==="
