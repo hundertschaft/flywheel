@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "name": "🍱 @g/assets",
+      "path": "assets"
+    },
+    {
+      "name": "🕸 App Platform",
+      "path": "platform"
+    },
+    {
+      // Complete Repo
+      "name": "🕳️",
+      "path": "."
+    }
+  ]
+}
