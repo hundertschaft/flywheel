@@ -69,6 +69,19 @@
           }
         ]
       }]
+    },
+    {
+      "label": "Dev",
+      "detail": "Runs Apps and Tooling in dev mode.",
+      "icon": {
+        "id": "run-all",
+        "color": "terminal.ansiBlue"
+      },
+      "presentation": {
+        "group": "dev",
+      },
+      "dependsOn": ["Browser", "Storybook"],
+      "problemMatcher": []
     }
   ]
 }
