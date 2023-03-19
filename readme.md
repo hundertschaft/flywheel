@@ -1,6 +1,9 @@
 <sub>`Work in Progress`</sub>
 
-# Portfolio
+Here on github, press the <kbd>.</kbd> key.<br>
+<sub>_Or go directly to the [app platform workspace](https://github.dev/hundertschaft/portfolio/blob/trunk/app-platform.code-workspace?workspace=true)._</sub>
+
+# Portfolio Architecture
 
 The purpose of this project is to present a _hands-on_ end-to-end system architecture that focuses on delivering _intelligent product features_ and enables _data value chains_. Hence, it should support lateral cross-team collaboration between domain experts, product designers, data / machine learning and product engineers.
 
