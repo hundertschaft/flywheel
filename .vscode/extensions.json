@@ -6,12 +6,8 @@
   "recommendations": [
     // For listing todos within the code
     "Gruntfuggly.todo-tree",
-    // Connect prettier to VS Code
-    "esbenp.prettier-vscode",
     // Minimize spelling errors within code
-    "streetsidesoftware.code-spell-checker",
-    // Facilitates working with JSX React Code
-    "formulahendry.auto-rename-tag"
+    "streetsidesoftware.code-spell-checker"
   ],
   // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
   "unwantedRecommendations": []

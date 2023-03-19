@@ -1,7 +1,7 @@
 {
-  "files.exclude": {
-    "*/*/**/node_modules": true
-  },
+  /*****************************************************************************
+   * Global Mono Repository Settings
+   ****************************************************************************/
   "todo-tree.tree.disableCompactFolders": false,
   "todo-tree.highlights.useColourScheme": true,
   "todo-tree.regex.enableMultiLine": false,

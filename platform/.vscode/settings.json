@@ -1,0 +1,21 @@
+{
+  /*****************************************************************************
+   * Platform (platform/) Workspace
+   ****************************************************************************/
+  "files.exclude": {
+    // Hide workspace config when within workspace
+    "**/.vscode": true,
+    // Hide all node_module folders
+    "**/node_modules": true,
+    // Hide workspace sub-directory node_modules folders
+    "*/**/node_modules": true,
+    // Hide devEx Tooling
+    "**/.husky": true,
+    // Hide config files
+    "**/*tsconfig*": true,
+    "**/*eslint*": true,
+    "**/*prettier*": true,
+    "**/.npmrc": true,
+    "**/pnpm-lock*": true
+  }
+}

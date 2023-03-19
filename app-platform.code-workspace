@@ -1,0 +1,100 @@
+{
+  "folders": [
+    {
+      "name": "🍱 @g/assets",
+      "path": "assets"
+    },
+    {
+      "name": "🕸 App Platform",
+      "path": "platform"
+      // See list of ignored files in
+      // repo/platform/.vscode/settings.json
+    },
+    {
+      // Complete Repo
+      "name": "🕳️",
+      "path": "."
+    }
+  ],
+  "extensions": {
+    // Extended from repo/.vscode/settings.json
+    "recommendations": [
+      // For listing todos within the code
+      "Gruntfuggly.todo-tree",
+      // Minimize spelling errors within code
+      "streetsidesoftware.code-spell-checker",
+      // Connect prettier to VS Code
+      "esbenp.prettier-vscode",
+      // Facilitates working with JSX React Code
+      "formulahendry.auto-rename-tag"
+    ],
+    "unwantedRecommendations": []
+  },
+  "settings": {
+    // Extended from repo/.vscode/settings.json
+    "todo-tree.tree.disableCompactFolders": false,
+    "todo-tree.highlights.useColourScheme": true,
+    "todo-tree.regex.enableMultiLine": false,
+    "todo-tree.regex.regex": "(\\*|//|#|<!--|;|/\\*|^|^[ \\t]*(-|\\d+.))\\s*($TAGS)",
+    "todo-tree.filtering.includeHiddenFiles": true,
+    "todo-tree.general.tags": [
+      "BUG",
+      "HACK",
+      "FIXME",
+      "TODO",
+      "[ ]",
+      "[x]",
+      "DEPISSUE",
+      "NOTE",
+      "Note"
+    ],
+    "todo-tree.general.tagGroups": {
+      "NOTE": ["NOTE", "Note"]
+    },
+    "todo-tree.highlights.foregroundColourScheme": [
+      "#fff3f3dc",
+      "#271905de",
+      "#ffffffe8",
+      "#e6ffebee",
+      "#6dc46be6",
+      "#6dc46be6"
+    ],
+    "todo-tree.highlights.backgroundColourScheme": [
+      "#c21e12b4",
+      "#de8913b4",
+      "#e2c223d2",
+      "#0d742394",
+      "#68AF6724",
+      "#68af670c"
+    ],
+    "todo-tree.highlights.defaultHighlight": {
+      "opacity": 70,
+      "fontWeight": "bold",
+      "gutterIcon": true
+    },
+    "todo-tree.highlights.customHighlight": {
+      "DEPISSUE": {
+        "icon": "package-dependencies",
+        "foreground": "#ffeff2d6",
+        "background": "#e281a34b",
+        "iconColour": "#a9405c40"
+      },
+      "NOTE": {
+        "icon": "pencil",
+        "type": "line",
+        "foreground": "#ffffff6e",
+        "background": "#0b3c0b4b",
+        "iconColour": "#62975a40",
+        "hideFromTree": true,
+        "fontWeight": "normal",
+        "fontStyle": "italic",
+        "gutterIcon": true
+      }
+    },
+    "todo-tree.tree.labelFormat": "${after}",
+    "editor.wordWrapColumn": 90,
+    "editor.wordWrap": "wordWrapColumn",
+    "diffEditor.wordWrap": "off",
+    "cSpell.words": ["DEPISSUE"]
+  }
+}

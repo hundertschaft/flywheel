@@ -1,0 +1,11 @@
+{
+  /*****************************************************************************
+   * Assets (assets/) Workspace
+   ****************************************************************************/
+  "files.exclude": {
+    // Hide workspace config when within workspace
+    "**/.vscode": true,
+    // Hide package.json files
+    "**/package.json": true
+  }
+}
