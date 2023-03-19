@@ -1,0 +1,46 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      /**
+      * Vite
+      */
+      "name": "Browser (Chrome)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": [
+        "start:browser",
+      ],
+      "serverReadyAction": {
+        "action": "debugWithChrome",
+        "webRoot": "${workspaceFolder}/apps/browser/src",
+        "pattern": "localhost:([0-9]+)",
+        "uriFormat": "http://localhost:%s",
+      },
+      "internalConsoleOptions": "openOnFirstSessionStart",
+    },
+    {
+      /**
+      * Storybook
+      */
+      "name": "Storybook (Chrome)",
+      /**
+       * Standard type="node" approach doesn't work with Storybook
+       * Found here: https://bruceleeharrison.com/posts/2022/debug-storybook-from-vscode-2022
+       */
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "pnpm start:storybook",
+      "internalConsoleOptions": "openOnFirstSessionStart",
+      "serverReadyAction": {
+        "pattern": "Local:.+(https?://[^:]+:[0-9]+)",
+        "uriFormat": "%s",
+        "action": "debugWithChrome"
+      }
+    }
+  ]
+}
