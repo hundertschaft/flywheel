@@ -2,8 +2,8 @@
   "name": "@tooling/storybook",
   "scripts": {
     "build-storybook": "storybook build",
-    "dev": "storybook dev -p 6006 --ci --quiet",
-    "storybook": "storybook dev -p 6006"
+    "dev": "kill -15 $(lsof -ti:6006) || true && clear && storybook dev --ci --quiet -p 6006 ",
+    "storybook": "kill -15 $(lsof -ti:6006) || true && clear && storybook dev -p 6006"
   },
   "dependencies": {
     "react": "^18.2.0",

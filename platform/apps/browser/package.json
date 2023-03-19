@@ -1,9 +1,9 @@
 {
-  "name": "@p/browser",
+  "name": "@apps/browser",
   "type": "module",
   "scripts": {
     "build": "tsc && vite build",
-    "dev": "vite --host --port 3000",
+    "dev": "kill -15 $(lsof -ti:3000) || true && vite --host --port 3000",
     "preview": "vite preview"
   },
   "devDependencies": {

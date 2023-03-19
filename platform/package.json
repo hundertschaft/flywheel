@@ -5,6 +5,8 @@
   "scripts": {
     "prepare": "cd .. && husky install platform/_tooling/.husky",
     "start": "pnpm --parallel --stream --if-present -r run dev",
+    "start:browser": "pnpm --filter @apps/browser run dev",
+    "start:storybook": "pnpm --filter @tooling/storybook run dev",
     "sys:clear-ports": "kill -15 $(lsof -ti:3000,6006)",
     "w:code:fix-format": "prettier --write .",
     "w:code:fix-logic": "eslint -c .eslintrc.ci.json . --fix",
