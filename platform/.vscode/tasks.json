@@ -27,6 +27,48 @@
       },
       "isBackground": false,
       "problemMatcher": [],
+    },
+    {
+      "label": "Storybook",
+      "detail": "Runs storybook dev in _tooling/storybook on port 6006.",
+      "icon": {
+        "id": "layout",
+        "color": "terminal.ansiMagenta"
+      },
+      "type": "npm",
+      "script": "start:storybook",
+      "presentation": {
+        "group": "dev",
+        "echo": true,
+        "reveal": "always",
+        "revealProblems": "onProblem",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": true,
+        "close": true
+      },
+      "isBackground": false,
+      "problemMatcher": [{
+        "owner": "Storybook",
+        "source": "Storybook",
+        /**
+        * DEPISSUE In many cases, Storybook does not provide a file and/or line numbers
+        * Example: "WARN No story files found for the specified pattern: *.@(stories|story).@(js|jsx|ts|tsx)"
+        *
+        * NOTE: To catch problems use ECMAScript Regex Capture Groups and see https://code.visualstudio.com/docs/editor/tasks#_defining-a-problem-matcher
+        */
+        "pattern": [
+          {
+            // Catching missing stories console warning.
+            "regexp": "(WARN|ERROR) (.*)$",
+            "file": 2,
+            "kind": "file",
+            "message": 2,
+            "severity": 1
+          }
+        ]
+      }]
     }
   ]
 }
