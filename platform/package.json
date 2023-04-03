@@ -16,7 +16,11 @@
     "w:packages:fix-format": "syncpack format",
     "w:packages:fix-mismatch": "syncpack fix-mismatches",
     "w:packages:lint": "syncpack list-mismatches",
-    "w:packages:list": "syncpack list"
+    "w:packages:list": "syncpack list",
+    "w:update": "pnpm run w:update-list; pnpm run w:update-scripts; pnpm install; pnpm run w:update-list; pnpm run w:packages:lint; echo '\n\n=== 🦺🦺🦺🦺🦺 ===\n\nPlease check installs and functionality.\n\nRun \"pnpm run w:update-interactive\" and \n\"pnpm run w:packages:fix-mismatch\" respectively \nto groom workspace wide dependencies.\n\nThe Pre-Commit Hook will block commits in a state\nof mismatching workspace dependencies.\n\n=== 🦺🦺🦺🦺🦺 ===\n\n'",
+    "w:update-interactive": "pnpm up -r --workspace --interactive",
+    "w:update-list": "pnpm outdated -r",
+    "w:update-scripts": "pnpm --stream --if-present -r run '/:update/'"
   },
   "dependencies": {
     "react": "^18.2.0",
