@@ -1,6 +1,6 @@
 {
   "name": "ui",
   "dependencies": {
-    "@xstyled/emotion": "^3.7.0"
+    "@xstyled/emotion": "^3.8.0"
   }
 }

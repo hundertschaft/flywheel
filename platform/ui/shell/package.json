@@ -2,6 +2,6 @@
   "name": "@ui/shell",
   "dependencies": {
     "@emotion/react": "^11.10.6",
-    "@xstyled/emotion": "^3.7.0"
+    "@xstyled/emotion": "^3.8.0"
   }
 }
