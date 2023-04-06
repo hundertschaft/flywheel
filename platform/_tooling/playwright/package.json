@@ -1,13 +1,12 @@
 {
   "name": "@tooling/playwright",
-  "version": "1.0.0",
-  "description": "",
-  "author": "",
+  "description": "Browser automation tooling. Tests and specs reside in @features.",
   "scripts": {},
   "devDependencies": {
-    "@playwright/test": "^1.32.2"
+    "@playwright/test": "^1.32.2",
+    "@types/node": "^18.15.11"
   },
-  "keywords": [],
-  "license": "ISC",
-  "main": "index.js"
+  "peerDependencies": {
+    "@features/specs": "workspace:*"
+  }
 }

@@ -1,0 +1,8 @@
+{
+  "name": "@g/features",
+  "description": "Dependencies outside of workspace for spec, test and docs authoring.",
+  "private": true,
+  "devDependencies": {
+    "@playwright/test": "^1.32.2"
+  }
+}
