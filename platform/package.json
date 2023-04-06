@@ -8,6 +8,8 @@
     "start:browser": "pnpm --filter @apps/browser run dev",
     "start:storybook": "pnpm --filter @tooling/storybook run dev",
     "sys:clear-ports": "kill -15 $(lsof -ti:3000,6006)",
+    "sys:node_modules:calc": "find ../. -name 'node_modules' -type d -prune | xargs du -chs",
+    "sys:node_modules:delete": "find ../. -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
     "w:code:fix-format": "prettier --write .",
     "w:code:fix-logic": "eslint -c .eslintrc.ci.json . --fix",
     "w:code:lint-format": "prettier --check .",

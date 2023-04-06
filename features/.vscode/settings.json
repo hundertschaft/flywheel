@@ -1,0 +1,15 @@
+{
+  /*****************************************************************************
+   * Features (features/) Workspace
+   ****************************************************************************/
+  "files.exclude": {
+    // Hide workspace config when within workspace
+    "**/.vscode": true,
+    // Hide package.json files
+    "**/package.json": true,
+    // Hide tsconfig.json files
+    "**/tsconfig.json": true,
+    // Hide node_modules
+    "**/node_modules": true
+  }
+}

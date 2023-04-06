@@ -5,6 +5,12 @@
       "path": "assets"
     },
     {
+      "name": "🧪 @features/spec",
+      "path": "features/spec"
+      // See list of ignored files in
+      // repo/features(/spec)/.vscode/settings.json
+    },
+    {
       "name": "📍 App Platform",
       "path": "platform"
       // See list of ignored files in

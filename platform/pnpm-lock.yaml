@@ -56,16 +56,16 @@ importers:
     devDependencies:
       '@playwright/test': 1.32.2
 
-  ../features/specs:
+  ../features/spec:
     specifiers: {}
 
   _tooling/playwright:
     specifiers:
-      '@features/specs': workspace:*
+      '@features/spec': workspace:*
       '@playwright/test': ^1.32.2
       '@types/node': ^18.15.11
     dependencies:
-      '@features/specs': link:../../../features/specs
+      '@features/spec': link:../../../features/spec
     devDependencies:
       '@playwright/test': 1.32.2
       '@types/node': 18.15.11

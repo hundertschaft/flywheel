@@ -7,6 +7,6 @@
     "@types/node": "^18.15.11"
   },
   "peerDependencies": {
-    "@features/specs": "workspace:*"
+    "@features/spec": "workspace:*"
   }
 }
