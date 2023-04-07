@@ -51,8 +51,11 @@
     "syncpack": "^9.8.4"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,scss,css,md,html,json}": [
+    "*.{js,jsx,ts,tsx}": [
       "eslint -c .eslintrc.ci.json --fix",
+      "prettier --write"
+    ],
+    "*.{scss,html,css,md,json}": [
       "prettier --write"
     ],
     "package.json": [
