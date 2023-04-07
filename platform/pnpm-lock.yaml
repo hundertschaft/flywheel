@@ -73,21 +73,11 @@ importers:
       '@playwright/test':
         specifier: ^1.32.2
         version: 1.32.2
-
-  ../features/spec: {}
-
-  _tooling/playwright:
-    dependencies:
-      '@features/spec':
-        specifier: workspace:*
-        version: link:../../../features/spec
-    devDependencies:
-      '@playwright/test':
-        specifier: ^1.32.2
-        version: 1.32.2
       '@types/node':
         specifier: ^18.15.11
         version: 18.15.11
+
+  ../features/spec: {}
 
   _tooling/storybook:
     dependencies:

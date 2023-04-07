@@ -1,8 +1,9 @@
 {
-  "name": "@g/features",
-  "description": "Dependencies outside of workspace for spec, test and docs authoring.",
-  "private": true,
+  "name": "@features/testing",
+  "description": "Browser automation tooling. Tests and specs reside in @features.",
+  "scripts": {},
   "devDependencies": {
-    "@playwright/test": "^1.32.2"
+    "@playwright/test": "^1.32.2",
+    "@types/node": "^18.15.11"
   }
 }
