@@ -3,6 +3,7 @@
   "description": "Application Development Workspace of the Mono Repository",
   "packageManager": "pnpm@7.27.1",
   "scripts": {
+    "install-hard": "pnpm run sys:node_modules:delete && pnpm install",
     "prepare": "cd .. && husky install platform/_tooling/.husky",
     "start": "pnpm --parallel --stream --if-present -r run dev",
     "start:browser": "pnpm --filter @apps/browser run dev",
