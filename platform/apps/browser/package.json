@@ -3,7 +3,8 @@
   "type": "module",
   "scripts": {
     "build": "tsc && vite build",
-    "dev": "kill -15 $(lsof -ti:3000) || true && vite --host --port 3000",
+    "dev": "kill -15 $(lsof -ti:3000) || true && vite --host --strictPort --port 3000",
+    "dev:ci": "kill -15 $(lsof -ti:3010) || true && vite --host --strictPort --port 3010",
     "preview": "vite preview"
   },
   "devDependencies": {

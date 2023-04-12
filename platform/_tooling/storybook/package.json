@@ -3,6 +3,7 @@
   "scripts": {
     "build-storybook": "storybook build",
     "dev": "kill -15 $(lsof -ti:6006) || true && clear && storybook dev --ci --quiet -p 6006 ",
+    "dev:ci": "kill -15 $(lsof -ti:6016) || true && clear && storybook dev --ci --quiet -p 6016 ",
     "storybook": "kill -15 $(lsof -ti:6006) || true && clear && storybook dev -p 6006",
     "storybook:update": "pnpx storybook@next upgrade --skip-check"
   },
